@@ -1,0 +1,60 @@
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    margin-top: 220px;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  background-image: linear-gradient(180deg, #0000008c 0%, transparent 100%), url(../assets/ciudad.jpg);
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-position: top; /* Asegura que la imagen se alinee arriba */
+}
+.login{
+    background: #fff;
+    border-radius: 12px;
+    box-shadow:   0 8px 24px rgba(43, 88, 245, 0.15);
+    padding: 6rem;
+    max-width: 600px;
+    max-height: 600px;
+    text-align: center;
+}
+.login img{
+   width: 80px;
+   height: 80px;
+   border-radius: 10%;
+   border: none;
+   margin-bottom: 1rem;
+   object-fit: cover;
+}
+.login h1{
+    color:#1d276b;
+    margin: 0.5rem 0 1rem 0;
+    font-size: 2rem;
+}
+
+.boton{
+    display:block;
+    padding: 12px 24px;
+    border-radius:60px ;
+    text-decoration:#fff;
+    background-color:#0d9999 ;
+    font-weight: 600;
+    color:#fff;
+    box-shadow: 0 4px 15px rgba( 13,153,153,0.3);
+    transition: all 0.3s ease;
+    margin-top: 10%;
+}
+.redes-sociales img{ 
+    height: 60px;
+    width: 60px;
+}
+ .datos{
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+ }
