@@ -1,40 +1,159 @@
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VecinosAlert</title>
-    <link rel="shortcut icon" href="/assets/alrma.png" type="img/x-icon">
-    <link rel="stylesheet" href="/principal/styles.css">
+    <link rel="shortcut icon" href="/assets/alrma.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1 class="title">VecinosAlert🚨</h1>
-    <header>
-        <nav class=" nav container">
-            <div class="nav_pagina">
-                <h2 class="nav_titulo">Opciones</h2>
-            </div>
-            <ul class="nav_link nav_link--menu">
-                <li class="nav_items">
-                    <a href="#" class="nav_link">Perfil</a>
-                </li>
-                 <li class="nav_items">
-                    <a href="#" class="nav_link">Reportes</a>
-                </li>
-                 <li class="nav_items">
-                    <a href="#" class="nav_link">Noticias</a>
-                </li>
-                 <li class="nav_items">
-                    <a href="#" class="nav_link">Mapa</a>
-                </li>
-            </ul>
-        </nav>
+    <!--header-->
+    <header class="header">
+        <div class="nav container">
+        <div class="nav_logo">
+            <h1 class="nav_titulo">VecinosAlert🚨</h1>
+        </div>
+        <ul class="nav_link nav_link--menu">
+            <li class="nav_items">
+                <a href="#perfil" class="nav_link">
+                    <i class="fas fa-user"></i>Perfil
+                </a>
+            </li>
+            <li class="nav_items">
+                <a href="#reportes" class="nav_link">
+                    <i class="fas fa-flag"></i>Reporte
+                </a>
+            </li>
+            <li class="nav_items">
+                <a href="#noticias" class="nav_link">
+                    <i class="fas fa-newpaper"></i> Noticias
+                </a>
+            </li>
+            <li class="nav_items">
+                <a href="#mapa" class="nav_link">
+                    <i class="fas fa-map"></i> Mapa
+                </a>
+            </li>
+            <li class="nav_items">
+                <a href="/login/index.html" class="nav_link nav_link--logout">
+                     <i class="fas fa-sing-out-alt"></i> Cerrar Sesión
+                </a>
+               
+            </li>
+        </ul>
+        </div>
     </header>
-    <section class="vista Noticias">
-
+    <!--seccion hero/banner-->
+    <section class="hero">
+        <div class="hero_container container">
+            <h2 class="hero_title"> Protegiendo nuesta comundiad jusntos </h2>
+            <p class="hero_Paragraph">Reporta problemas de seguridad,alumbrado y vialidad en tu colonia </p>
+            <a href="#Reportar" class="cta_button">Crear Reporte</a>
+        </div>
     </section>
-    
+    <!--Seleccion de reportes rapidos-->
+    <section class="quick_reportes container">
+        <h3 class="section_title"> Reportar Problema</h3>
+        <div class="report_card" data-type="infraestructura">
+            <i class="fas fa-road"></i>
+            <h4>infraestructura</h4>
+            <p>Baches,Semaforos,Señalamientos</p>
+        </div>
+        <div class="report_card" data-type="alumbrado">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Alumbrado</h4>
+            <p> Luminaria apagadas, Postes dañados</p>
+        </div>
+        <div class="report_card" data-type="inseguridad">
+            <i class="fas fa-shield-alt"></i>
+            <h4> Inseguridad</h4>
+            <p> Robos,Personas sospechosas</p>
+        </div>
+    </section>
+    <!--sección de noticias-->
+    <section id="noticias" class="new-seccion container">
+        <h3 class="seccion_title">Noticias de la Comunidad</h3>
+        <div class="news_container">
+            <div class="news_card">
+                <div class="new_header">
+                    <span class="news_date">15 nov 2024</span>
+                    <span class="news_category seguridad">Seguridad</span> 
+                </div>
+                <h4 class="news_title">Jornada de Seguridad Vecinal</h4>
+                <p class="news_content">Este sábado reunión comunitaria para establecer protocolos de seguridad...</p>
+                <a href="#" class="news_link">Leer más</a>
+            </div>
+            <div class="news_card">
+                <div clas="news_header">
+                    <span class="news_date">12 Nov 2024</span>
+                    <Span class="news_category alumbrado">Alumbrado</Span>
+                </div>
+                <h4 class="news_title">Reparacion de Alumbrado Publúco</h4>
+                <p class="news_content">El municipio anuncia programa de mantenimiento para las próximas semanas...</p>
+                <a href="#" class="news_link">Leer más</a>
+            </div>
+        </div>
+    </section>
+<!--Modal para crear reporte-->
+<div id="reportModal" class="modal"> 
+    <div class="modal_content">
+        <span class="close_modal">&times;</span>
+        <h3>Crear Nuevo Reporte</h3>
+        <form id="reportFrom" class="report_from">
+            <div class="from_grup">
+                <label for="reportType">Tipo de Reporte</label>
+                <select id="reportType" name="reportType" required>
+                    <option value=" ">Seleccionar tipo</option>
+                    <option value=" infraestructura">Infrestructura</option>
+                    <option value="alumbrado">Alumbrado Público</option>
+                    <option value="inseguridad">Inseguridad</option>
+                    <option value="emergencia">Emergencia</option>
+                </select>
+            </div>
+            <div class="from_group">
+                <label for="reportTitle">Titulo</label>
+                <input type="text" id="reportTitle" name="reportTitle" placeholder="ej:Bache en AV.principal" required>
+            </div>
+            <div class="from_group">
+                <label for="reportDescription">Descripción</label>
+                <textarea id="reportDescription" name="reportDescription" placeholder="Descibe el problema en detalle..." rows="4" required></textarea>
+            </div>
+            <div class="from_group">
+                <label for="reportEvidence">Evidencia (opcional)</label>
+                <input type="file" id="reportEvidence" name="reportEvidence" accept="image/*,video/*">
+            </div>
+            <div class="form_actions">
+                <button type="submit" class="submit_btn">Enviar Reporte</button>
+                <button type="button" class="cancel_btn">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--footer-->
+<footer class="footer">
+        <div class="footer_container container">
+            <div class="footer_section">
+                <h4>VecinosAlert</h4>
+                <p> Plataforma comunitaria para la seguridad y mejora de nuestro vecindario </p>
+            </div>
+            <div class="footer_section">
+                <h4>Contactos</h4>
+                <p>Email:info@vecinosalert.com</p>
+                <p> Telefono: 33 10156097</p>
+            </div>
+            <div class="footer_section">
+                <h4>Siguenos</h4>
+                <div class="social_links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+</footer>
+<script src="/js/script.js"></script>
 </body>
 </html>
