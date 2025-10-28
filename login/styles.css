@@ -1,0 +1,154 @@
+/*login*/
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    margin-top: 220px;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg, #0000008c 0%, transparent 100%), url(../assets/ciudad.jpg);
+    background-size: 100% 40%;
+    background-repeat: no-repeat;
+    background-position: top; /* Asegura que la imagen se alinee arriba */
+}
+.login {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login h1 {
+    color: #2563eb;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 3px solid #2563eb;
+}
+
+.datos {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.datos:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #374151;
+}
+
+.boton {
+    display: inline-block;
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 1rem 0;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background: #1e40af;
+}
+
+.redes-sociales {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.redes-sociales a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.redes-sociales a:hover img {
+    transform: scale(1.1);
+}
+/* Estilos para mensajes */
+.login-message {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    animation: slideDown 0.3s ease;
+}
+
+.login-message--error {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.login-message--success {
+    background-color: #d1fae5;
+    color: #059669;
+    border: 1px solid #a7f3d0;
+}
+
+.login-message--info {
+    background-color: #dbeafe;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+
+/* Animación para mensajes */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para botón deshabilitado */
+.boton:disabled {
+    background-color: #9ca3af !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+}
+
+/* Efectos de hover mejorados */
+.redes-sociales a {
+    transition: all 0.3s ease;
+}
+
+.datos:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
